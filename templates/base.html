@@ -1,15 +1,21 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no">
     <title>{% block title %}默认标题{% endblock %}</title>
+
+    <link rel="shortcut icon" href="{% static 'images/favicon_blog.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="/DjangoBootstrap/static/bootstrap/css/bootstrap.min.css">
+    <script src="{% static 'bootstrap/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="/DjangoBootstrap/static/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
     {% block body %}
         内容
     {% endblock %}
 
-    
+
 </body>
 </html>
