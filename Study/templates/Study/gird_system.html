@@ -7,6 +7,7 @@
 
 {% block body %}
     <div class="container">
+        <br>
         <div class="row">
             <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;
                 box-shadow: inset 1px -1px 1px #444,inset 1px -1px 1px #444;">
@@ -36,6 +37,144 @@
                 enim ad minim
                 </p>
             </div>
+        </div>
+        Hello,world!
+
+        <!--偏移可以居中-->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3" style="background-color: #dedef8">
+                <p class="text-center">偏移居中效果</p>
+            </div>
+        </div>
+        <br>
+        <!--嵌套-->
+        <div class="row">
+            <div class="col-md-3" style="background-color: #dedef8">
+                <p class="text-center">第1列</p>
+            </div>
+
+            <div class="col-md-9" style="background-color: #dedef8">
+                <h4>第二列 - 分为四个盒子</h4>
+                <div class="row">
+                    <div class="col-md-6" style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            Consectetur art party Tonx culpa semiotics. Pinterest
+                            assumenda minim organic quis.
+                        </p>
+                    </div>
+                    <div class="col-md-6" style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                             sed do eiusmod tempor incididunt ut labore et dolore magna
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="col-md-6" style="background-color: #B18904; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <h1>我是标题1 h1. <small>我是副标题1 h1</small></h1>
+        <h2>引导主体副本</h2>
+        <p class="lead">这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。</p>
+
+        <abbr title="World Wide Web">WWW</abbr><br>
+        <abbr title="Real Simple Syndication" class="initialism">RSS</abbr>
+
+
+        <blockquote>
+          <p>
+          这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。
+          </p>
+        </blockquote>
+        <blockquote>
+          这是一个带有源标题的引用。
+          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+        <blockquote class="pull-right text-right">
+          这是一个向右对齐的引用。
+          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+
+        <dl>
+          <dt>Description 1</dt>
+          <dd>Item 1</dd>
+          <dt>Description 2</dt>
+          <dd>Item 2</dd>
+        </dl>
+        <h4>水平的定义列表</h4>
+        <dl class="dl-horizontal">
+          <dt>Description 1</dt>
+          <dd>Item 1</dd>
+          <dt>Description 2</dt>
+          <dd>Item 2</dd>
+        </dl>
+
+        <table class="table">
+          <caption>上下文表格布局</caption>
+          <thead>
+            <tr>
+              <th>产品</th>
+              <th>付款日期</th>
+              <th>状态</th></tr>
+          </thead>
+          <tbody>
+            <tr class="active">
+              <td>产品1</td>
+              <td>23/11/2013</td>
+              <td>待发货</td></tr>
+            <tr class="success">
+              <td>产品2</td>
+              <td>10/11/2013</td>
+              <td>发货中</td></tr>
+            <tr class="warning">
+              <td>产品3</td>
+              <td>20/10/2013</td>
+              <td>待确认</td></tr>
+            <tr class="danger">
+              <td>产品4</td>
+              <td>20/10/2013</td>
+              <td>已退货</td></tr>
+          </tbody>
+        </table>
+
+        <form role="form">
+          <div class="form-group">
+            <label for="name">名称</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+          </div>
+          <div class="form-group">
+            <label for="inputfile">文件输入</label>
+            <input type="file" id="inputfile">
+            <p class="help-block">这里是块级帮助文本的实例。</p>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">请打勾
+            </label>
+          </div>
+          <button type="submit" class="btn btn-default">提交</button>
+        </form>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">Apple</button>
+          <button type="button" class="btn btn-primary">Samsung</button>
+          <button type="button" class="btn btn-primary">Sony</button>
         </div>
     </div>
 {% endblock %}
