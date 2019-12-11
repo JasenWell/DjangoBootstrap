@@ -1,47 +1,39 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>love</title>
-    <link rel="shortcut icon" href="{% static 'images/favicon_blog.ico' %}" type="image/x-icon">
-   <link rel="stylesheet" href="/DjangoBootstrap/static/bootstrap/css/bootstrap.min.css">
-   <!--  <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">-->
 
-    <script src="/DjangoBootstrap/static/bootstrap/js/jquery-3.4.1.min.js"></script>
-    <script src="/DjangoBootstrap/static/bootstrap/js/bootstrap.min.js"></script>
-</head>
-<body style=" background: url(http://global.bing.com/az/hprichbg/rb/RavenWolf_EN-US4433795745_1920x1080.jpg) no-repeat center center fixed; background-size: 100%;">
+{% extends 'base.html' %}
+
+{% block title %}登录 {% endblock %}
+
+{% block body %}
+    <body style=" background: url(http://global.bing.com/az/hprichbg/rb/RavenWolf_EN-US4433795745_1920x1080.jpg) no-repeat center center fixed; background-size: 100%;">
 
 
-    <div class="modal-dialog modal-dialog-centered" ><!--style="margin-top: 0%"-->
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered center-block" ><!--style="margin-top: 0%"-->
+            <div class="modal-content">
+                <div class="modal-header">
 
-                <h4 class="modal-title text-center" id="myModalLabel">登录</h4>
-            </div>
-            <div class="modal-body" id = "model-body">
-                <div class="form-group">
-
-                    <input type="text" class="form-control"placeholder="用户名" autocomplete="off">
+                    <h4 class="modal-title text-center" id="myModalLabel">登录</h4>
                 </div>
-                <div class="form-group">
+                <div class="modal-body" id = "model-body">
+                    <div class="form-group">
 
-                    <input type="password" class="form-control" placeholder="密码" autocomplete="off">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="form-group">
-                    <button type="button" class="btn btn-primary form-control">登录</button>
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-default form-control">注册</button>
-                </div>
+                        <input type="text" class="form-control"placeholder="用户名" autocomplete="off">
+                    </div>
+                    <div class="form-group">
 
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
+                        <input type="password" class="form-control" placeholder="密码" autocomplete="off">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary form-control">登录</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default form-control">注册</button>
+                    </div>
 
-</body>
-</html>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </body>
+{% endblock %}
+
