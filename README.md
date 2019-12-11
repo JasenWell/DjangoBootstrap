@@ -11,3 +11,6 @@
 https://www.w3cschool.cn/bootstrap/bootstrap-codecamp.html
 https://www.runoob.com/bootstrap/bootstrap-tutorial.html   bootstrap3
 https://www.runoob.com/bootstrap4/bootstrap4-tutorial.html bootstrap4
+
+
+https://code.ziqiangxuetang.com/django1.x/django-views-urls.html 教程
