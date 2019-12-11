@@ -6,14 +6,14 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=no">
-    <title>{% block title %}默认标题{% endblock %}</title>
 
+    <!--http://www.favicon-icon-generator.com/favicon ico图片制作 此2行解决django Not Found: /favicon.ico-->
     <link rel="shortcut icon" href="{% static 'images/favicon_blog.ico' %}" type="image/x-icon">
 
     <link rel="stylesheet" href="/DjangoBootstrap/static/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="{% static 'bootstrap/3.3.7/js/jquery-2.1.1.min.js' %}"></script>
     <script src="/DjangoBootstrap/static/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <title>{% block title %}默认标题{% endblock %}</title>
   <!--
     <link rel="stylesheet" href="/DjangoBootstrap/static/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="{% static 'bootstrap/3.3.7/js/jquery-2.1.1.min.js' %}"></script>
@@ -27,12 +27,26 @@
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
  -->
+
+    <!-- 引入下面两个库让 IE8 支持 HTML5 元素 -->
+    <!-- 警告: Respond.js 通过 file:// 浏览的时候不能正常工作！-->
+    <!--[if lt IE 9]>
+      <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+      <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% block css %}
+
+    {% endblock css %}
+
+    {% block js %}
+
+    {% endblock js %}
 </head>
 <body>
     {% block body %}
         内容
     {% endblock %}
 
-
+    {% include "baidutongji.html" %}
 </body>
 </html>

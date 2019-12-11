@@ -17,7 +17,6 @@ def checkLoginStatus(func):
             return result
         else:
             request.session['username'] = 'hjh'
-            print(reverse(login))
             return HttpResponseRedirect('/test/login')
     return func_in
 
