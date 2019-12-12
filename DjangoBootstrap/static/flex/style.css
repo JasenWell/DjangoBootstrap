@@ -1,0 +1,151 @@
+html{
+    height: 100vh;
+    display:-webkit-flex;
+    display:-ms-flex;
+    display:-moz-flex;
+    display:-o-flex;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+body{
+    padding: 20px;
+    margin: 0 auto;
+	background-color: #E2E2E2;
+	max-width: 100vh;
+	color: #595B66;
+	font-family: 'Microsoft Yahei', sans-serif;
+}
+
+.layout-direction-vertical{
+    flex-direction: column;
+}
+
+.layout-direction-horizontal {
+	flex-direction: row;
+}
+
+.layout-style-config {
+	background-color: white;
+    width:70vh;
+    height: 40vh;
+}
+
+.layout-horizontal-center{
+    justify-content:center;
+}
+
+.layout-vertical-center{
+     align-items:center;
+}
+
+.layout-center{
+    margin: auto;
+    horiz-align: center;
+    vertical-align: center;
+    text-align: center;
+    align-items:center;
+    align-content: center;
+    justify-content:center;
+}
+
+.box-item {
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	vertical-align: middle;
+	margin: 5px;
+	background-color: #ffd200;
+	font-size: 100px;
+	color: white;
+	text-align: center;
+}
+
+
+
+.container_login {
+    display: flex;
+    height:100%;
+    width: 100vh;
+
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f8f8f8;
+  }
+
+  .header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content .input {
+    width: 100%;
+    background: #fff;
+  }
+  .input text{
+    font-size: 15px;
+  }
+  .input input{
+    flex: 1;
+
+  }
+  .line{
+    height: 15px;
+    margin: 5px 5px 5px 10px;
+    border-left: 1px solid gainsboro;
+  }
+  .account {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .password {
+    padding: 8px;
+    display: flex;
+      align-items: center;
+  }
+
+  .commit button {
+    margin: 10px 20px 10px 20px;
+    background: #5da3ed;
+    font-size: 15px;
+    color: white;
+  }
+
+  .footer {
+    width: 100%;
+
+
+  }
+
+  .userTip {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .userTip  text {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #5da3ed;
+  }

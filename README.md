@@ -22,3 +22,14 @@ http://static.vgee.cn/static/index.html
 http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 https://www.runoob.com/w3cnote/flex-grammar.html
 https://www.jianshu.com/p/cf394b500471
+
+https://blog.csdn.net/qq_27822743/article/details/81746218 兼容
+flex布局模板
+https://github.com/meikidd/flex-layout
+https://www.mmxiaowu.com/article/58482437d4352863efb5546e
+https://blog.csdn.net/qq_35658349/article/details/100060329
+https://blog.csdn.net/fukaiit/article/details/79436343
+https://blog.csdn.net/zhy13087344578/article/details/80520799
+https://blog.csdn.net/leng0920/article/details/90207400
+https://blog.csdn.net/wangye111112222/article/details/100071785
+https://blog.csdn.net/weixin_34005042/article/details/91426188

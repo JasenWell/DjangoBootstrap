@@ -1,10 +1,16 @@
 <!DOCTYPE html>
+{% load  staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Title{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon_blog.ico' %}" type="image/x-icon">
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'flex/style.css' %}">
 </head>
-<body>
 
-</body>
+    {% block body %}
+    
+    {% endblock %}
+
 </html>
