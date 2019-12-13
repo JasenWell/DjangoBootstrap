@@ -1,5 +1,5 @@
 {% extends 'flexbase.html' %}
-
+{% load  staticfiles %} <!--每个页面都要注册?-->
 {% block title %}登录{% endblock %}
 
 {% block body %}
@@ -9,7 +9,7 @@
     <view class='container_login'>
 
       <view class='header'>
-        <image src='{{headerimg}}' class='header-img'></image>
+        <img src="{% static 'images/favicon_blog.ico' %}" class='header-img'/>
       </view>
 
       <view class='content'>
