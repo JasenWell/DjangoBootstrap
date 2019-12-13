@@ -1,6 +1,29 @@
-{% extends 'flexbase.html' %}
+{% extends 'base.html' %}
 {% load  staticfiles %} <!--每个页面都要注册?-->
 {% block title %}登录{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'flex/style.css' %}">
+
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#btn_login").click(function(){
+            let value = $("#text_account").val();
+            if (value == null || value === ""){
+                alert('账号不能为空');
+            }else{
+                value = document.getElementById("text_pwd").value;
+                if (value == null || value === "") {
+                    alert('密码不能为空');
+                }
+            }
+        });
+    });
+    </script>
+{% endblock %}
 
 {% block body %}
 <body>
@@ -17,16 +40,16 @@
           <view class='account'>
             <text>账号 </text>
             <view class='line'></view>
-            <input></input>
+            <input type="text" id="text_account"></input>
           </view>
           <view class='password'>
             <text>密码 </text>
             <view class='line'></view>
-            <input password='true'></input>
+            <input password='true' id="text_pwd"></input>
           </view>
         </view>
         <view class='commit'>
-          <button>登 录</button>
+          <button id="btn_login">登 录</button>
         </view>
       </view>
 

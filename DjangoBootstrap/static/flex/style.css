@@ -113,14 +113,14 @@ body{
   .account {
       display: flex;
       padding: 8px;
-      min-height: 50px;
+      line-height: 50px;
       align-items: center;
       border-bottom: 1px solid lightgray;
   }
 
   .password {
       padding: 8px;
-      min-height: 50px;
+      line-height: 50px;
       display: flex;
       align-items: center;
   }
@@ -129,7 +129,7 @@ body{
       width: 100%;
       display: flex;
       justify-content: center;
-
+      padding: 8px;
   }
 
   .commit button {
