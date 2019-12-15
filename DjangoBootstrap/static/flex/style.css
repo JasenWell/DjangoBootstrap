@@ -1,5 +1,6 @@
 html{
     height: 100vh;
+    width: 100vw;
     display:-webkit-flex;
     display:-ms-flex;
     display:-moz-flex;
@@ -10,34 +11,23 @@ html{
 }
 
 body{
-    padding: 20px;
+    display:-webkit-flex;
+    display:-ms-flex;
+    display:-moz-flex;
+    display:-o-flex;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width: 100%; /*百分比基于父类 vh视图高 vw视图宽 */
+    height: 100%;
     margin: 0 auto;
 	background-color: #E2E2E2;
-	max-width: 100vh;
 	color: #595B66;
 	font-family: 'Microsoft Yahei', sans-serif;
 }
 
-.layout-direction-vertical{
-    flex-direction: column;
-}
-
-.layout-direction-horizontal {
-	flex-direction: row;
-}
-
-.layout-style-config {
-	background-color: white;
-    width:70vh;
-    height: 40vh;
-}
-
-.layout-horizontal-center{
-    justify-content:center;
-}
-
-.layout-vertical-center{
-     align-items:center;
+.page-container{
+    padding: 20px;
 }
 
 .layout-center{
@@ -66,8 +56,8 @@ body{
 
 .container_login {
     display: flex;
-    height:100%;
-    width: 100vh;
+    height:50%;
+    width: 50%;
 
     flex-direction: column;
     align-items: center;
@@ -99,12 +89,15 @@ body{
     background-color: #fff;
   }
   .input text{
-    font-size: 15px;
+    font-size: 18px;
   }
   .input input{
-    flex: 1;
-
+      flex: 1;
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
   }
+
   .line{
     height: 15px;
     margin: 5px 5px 5px 10px;
@@ -113,14 +106,14 @@ body{
   .account {
       display: flex;
       padding: 8px;
-      line-height: 50px;
+      line-height: 40px;
       align-items: center;
-      border-bottom: 1px solid lightgray;
+      /*border-bottom: 1px solid lightgray;取消下面的线*/
   }
 
   .password {
       padding: 8px;
-      line-height: 50px;
+      line-height: 40px;
       display: flex;
       align-items: center;
   }
@@ -137,14 +130,12 @@ body{
       min-height: 50px;
       margin-bottom: 20px;
       background: #5da3ed;
-      font-size: 15px;
+      font-size: 18px;
       color: white;
   }
 
   .footer {
     width: 80%;
-
-
   }
 
   .userTip {
@@ -160,3 +151,133 @@ body{
       font-size: 13px;
       color: #5da3ed;
   }
+
+  /*对话框背景*/
+    .dialog-full-hide{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.2);
+        display: none;
+    }
+
+    .dialog-full-show{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*弹出的对话框*/
+    .login-hint{
+        width: 35%;
+        height: 35%;
+        background:rgba(0,0,0,0.5);
+        border: 1px solid #000000;
+    }
+
+    .login-hint-text{
+        margin: 20%;
+        text-align: center;
+        color: black;
+    }
+
+
+
+
+
+    /*主页*/
+    .home {
+        display: flex;
+        height:100%;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #f8f8f8;
+    }
+
+    .home-nav{
+        display: flex;
+        height:20%;
+        width: 100%;
+
+        flex-direction: row;
+        background-color: red;
+    }
+
+    .home-main{
+        display: flex;
+        height: 80%;
+        width: 100%;
+
+        flex-direction: row;
+        background-color: blue;
+    }
+
+
+  .hjh-container {
+  background-color: #fff;
+  border: 4px solid lightgrey;
+  border-radius: 10px;
+  width: 80%;
+  margin: 2% auto;
+  position: relative;
+}
+
+.hjh-HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.hjh-Header,
+.hjh-Footer {
+  flex: 1;
+  height: 100px;
+  background-color: grey;
+  color: #fff;
+  line-height: 100px;
+}
+
+.hjh-HolyGrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.hjh-HolyGrail-content {
+  background-color: lightgrey;
+  height: 600px;
+  line-height: 600px;
+  color: #fff;
+  flex: 1;
+}
+
+.hjh-HolyGrail-nav,
+.hjh-HolyGrail-ads {
+  background-color: skyblue;
+  height: 600px;
+  line-height: 600px;
+  color: #fff;
+  flex: 0 0 12em;
+}
+
+.hjh-HolyGrail-nav {
+  background-color: orange;
+  order: -1;
+}
+
+@media (max-width: 768px) {
+  .hjh-HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .hjh-HolyGrail-nav,
+  .hjh-HolyGrail-ads,
+  .hjh-HolyGrail-content {
+    flex: auto;
+  }
+}

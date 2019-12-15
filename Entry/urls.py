@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^home$', views.home, name='home'),
     url(r'^login', views.login, name='login'),
 
+    url(r'^column$', views.column, name='column-home'),
     url(r'^column/(?P<column_slug>[^/]+)/$', views.columnDetail, name='column'),
     url(r'^news/(?P<article_slug>[^/]+)/$', views.articleDetailOld, name='article'),
     url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$', views.articleDetail, name='article'),

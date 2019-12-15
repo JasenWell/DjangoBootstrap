@@ -9,15 +9,43 @@
 
 {% block js %}
     <script type="text/javascript">
+
     $(document).ready(function(){
         $("#btn_login").click(function(){
-            let value = $("#text_account").val();
-            if (value == null || value === ""){
-                alert('账号不能为空');
+            let account = $("#text_account").val();
+            if (account == null || account === ""){
+                $('.login-hint-text').text('账号不能为空!');
+                $("#login-hint").removeClass('dialog-full-hide').addClass('dialog-full-show').show();
             }else{
-                value = document.getElementById("text_pwd").value;
-                if (value == null || value === "") {
-                    alert('密码不能为空');
+                let password = document.getElementById("text_pwd").value;
+                if (password == null || password === "") {
+                    $('.login-hint-text').text('密码不能为空!');<!--根据class取元素-->
+                    $("#login-hint").removeClass('dialog-full-hide').addClass('dialog-full-show').show(); <!-- 根据id取元素-->
+                }else {
+                    if(password.length < $('#text_pwd').attr('minlength')){
+                         $('.login-hint-text').text('密码格式不对!');
+                         $("#login-hint").removeClass('dialog-full-hide').addClass('dialog-full-show').show();
+                    }else{
+
+                        let csrfToken = $("[name='csrfmiddlewaretoken']").val();
+                        $.post("{% url 'entry:login' %}",{'csrfmiddlewaretoken':csrfToken,'account':account,'password':password},function (response,status) {
+                            if(status == 'success'){
+                                try {
+                                    result = response.status;
+                                    if(result == 1){
+                                        //alert(response.data)
+                                        //window.location.href
+                                    }else {
+                                        alert(response.msg);
+                                    }
+                                }catch (e) {
+                                    //说明返回重定向页面了
+
+                                }
+                            }
+
+                        },'json');
+                    }
                 }
             }
         });
@@ -27,6 +55,12 @@
 
 {% block body %}
 <body>
+    <div class="dialog-full-hide" id="login-hint">
+        <div class="login-hint">
+            <button type="button" onclick="jQuery('#login-hint').hide()" class="close" aria-label="close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="login-hint-text"></h3>
+        </div>
+    </div>
 
 
     <view class='container_login'>
@@ -36,20 +70,21 @@
       </view>
 
       <view class='content'>
-        <view class='input'>
+        <view class='input' >
+            {% csrf_token %}
           <view class='account'>
             <text>账号 </text>
             <view class='line'></view>
-            <input type="text" id="text_account"></input>
+            <input type="text" id="text_account" maxlength="32" minlength="3"></input>
           </view>
           <view class='password'>
             <text>密码 </text>
             <view class='line'></view>
-            <input password='true' id="text_pwd"></input>
+            <input password='true' id="text_pwd" maxlength="32" minlength="6" type="password"></input>
           </view>
         </view>
         <view class='commit'>
-          <button id="btn_login">登 录</button>
+          <button id="btn_login" type="button">登 录</button>
         </view>
       </view>
 
@@ -62,14 +97,7 @@
 
     </view>
 
-	<div class="layout-direction-vertical layout-style-config layout-horizontal-center layout-vertical-center" hidden>
 
-		<div class="layout-center">
-            登录
-
-        </div>
-
-	</div>
 </body>
 {% endblock %}
 
