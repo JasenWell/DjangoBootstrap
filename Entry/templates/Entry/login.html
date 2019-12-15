@@ -35,6 +35,7 @@
                                     if(result == 1){
                                         //alert(response.data)
                                         //window.location.href
+                                        
                                     }else {
                                         alert(response.msg);
                                     }
@@ -42,6 +43,10 @@
                                     //说明返回重定向页面了
 
                                 }
+                            }else {
+                                 //document.cookie="is_log=True;";
+                                //document.cookie="username="+name;
+                               // window.location.href='/home';
                             }
 
                         },'json');

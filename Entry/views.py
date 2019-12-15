@@ -95,7 +95,7 @@ def login(request):
                 print("next_url:", next_url)
                 rep = redirect(next_url)
             else:
-                print("ban")
+                print("重定向到主页")
                 rep = redirect(reverse('Entry:home'))
             # 1. 设置cookie
             # rep.set_cookie("is_login", "1")
@@ -149,7 +149,7 @@ def home(request):
     ret = int(ret)
     if ret == 1:
         print('switch-home', ret)
-        return render(request, template_name="Entry/home.html")
+        return render(request, template_name="Entry/home.html") #https://www.cnblogs.com/FanMLei/p/10501011.html 不执行
     else:
         print('switch-login', ret)
         return redirect("/login")
