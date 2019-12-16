@@ -9,6 +9,23 @@
     <script type="text/javascript" src = "../../../DjangoBootstrap/static/bootstrap/3.3.7/js/jquery-2.1.1.min.js"></script>
 
     <script type="text/javascript">
+        function compile(code) {
+           var c=String.fromCharCode(code.charCodeAt(0)+code.length);
+           for(var i=1;i<code.length;i++){
+           c+=String.fromCharCode(code.charCodeAt(i)+code.charCodeAt(i-1));
+           }
+           alert(escape(c));
+        }
+
+        function uncompile(code) {
+           code=unescape(code);
+           var c=String.fromCharCode(code.charCodeAt(0)-code.length);
+           for(var i=1;i<code.length;i++){
+           c+=String.fromCharCode(code.charCodeAt(i)-c.charCodeAt(i-1));
+           }
+           return c;
+        }
+
         if(0) {
             window.onload = function () {
                 document.onkeydown = function () {
@@ -39,6 +56,8 @@
              */
 
             $("#current_time").text(getCurrentTime());
+            //compile("alert('加密测试!');");//https://blog.csdn.net/doulinxu/article/details/60766242
+            eval(uncompile('p%CD%D1%D7%E6%9CO%u52C7%uAE66%uC911%uF920%u8BF6HPd'));
         });
 
     </script>

@@ -35,3 +35,5 @@ https://blog.csdn.net/wangye111112222/article/details/100071785
 https://blog.csdn.net/weixin_34005042/article/details/91426188
 
 js 代码格式化压缩 http://javascriptcompressor.com/
+https://blog.csdn.net/qq_41485414/article/details/80323023  前端加密
+https://blog.csdn.net/ruolanqingyi/article/details/80831659
