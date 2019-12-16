@@ -33,3 +33,5 @@ https://blog.csdn.net/zhy13087344578/article/details/80520799
 https://blog.csdn.net/leng0920/article/details/90207400
 https://blog.csdn.net/wangye111112222/article/details/100071785
 https://blog.csdn.net/weixin_34005042/article/details/91426188
+
+js 代码格式化压缩 http://javascriptcompressor.com/

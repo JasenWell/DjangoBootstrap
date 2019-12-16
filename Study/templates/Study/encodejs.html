@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-encode</title>
+    <script type="text/javascript" src="../../../DjangoBootstrap/static/js/currenttime.js"></script>
+
+    <script type="text/javascript" src = "../../../DjangoBootstrap/static/bootstrap/3.3.7/js/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        if(0) {
+            window.onload = function () {
+                document.onkeydown = function () {
+                    var e = window.event || arguments[0];
+                    if (e.keyCode == 123) {/*屏蔽F12*/
+                        alert("小样你想干嘛？");
+                        return false;
+                    } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+                        alert("还是不给你看。。");
+                        return false; /*屏蔽crtl+shift+i*/
+                    }
+                };
+                /*鼠标右键屏蔽*/
+                document.oncontextmenu = function () {
+                    alert("小样不给你看");
+                    return false;
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            var start = Number(new Date());
+            /**
+            while(start + 5000 > Number(new Date())) {//执行JS}
+                //这段代码将使JS执行5秒才完成！
+                $("#current_time").text(getCurrentTime());
+            }
+             */
+
+            $("#current_time").text(getCurrentTime());
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1>这是一个测试</h1>
+        <p>js加密成功了吗</p>
+        <p id="current_time">时间</p>
+    </div>
+</body>
+</html>
