@@ -38,3 +38,4 @@ js 代码格式化压缩 http://javascriptcompressor.com/
 https://blog.csdn.net/qq_41485414/article/details/80323023  前端加密
 https://blog.csdn.net/ruolanqingyi/article/details/80831659
 https://blog.csdn.net/qq_24935119/article/details/88577092 js混淆
+https://blog.csdn.net/hefeng6500/article/details/80024810
